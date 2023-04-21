@@ -9,7 +9,7 @@ window.onload = function() {
 
     function getInfosAPI(inputCodePostal) {
         const result = document.querySelector(".result")
-        fetch("https://geo.api.gouv.fr/communes?codePostal="+inputCodePostal.value+"&fields=nom,code,codesPostaux,population")
+        fetch("https://geo.api.gouv.fr/communes?codePostal="+inputCodePostal.value+"&fields=nom,code,codeEpci,codesPostaux,population")
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
@@ -17,6 +17,7 @@ window.onload = function() {
             result.innerHTML += "Nom : " + data[0].nom + "<br>"
             result.innerHTML += "La liste des codes postaux est : <ul>"
             data[0].codesPostaux.forEach((codePostal) => {
+                // Faire une requete pour chaque code de commune pour avoir les noms en plus ?
                 result.innerHTML += "<li style='list-style-type:none'>" + codePostal + "</li>"
             });
             result.innerHTML += "</ul><br>"
