@@ -1,0 +1,74 @@
+* {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+}
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+
+#hiddenId {
+    display: none;
+}
+
+#mainDetail {
+    width: 100%;
+}
+
+
+#pokeDetailHeader {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+
+#pokeImg {
+    position: relative;
+    left: 20px;
+    padding-bottom: 5px;
+    width: 20%;
+    transform: translateX(-500px);
+    
+    /* Animation slide from left */
+    animation: moveImg 1.5s ease forwards;
+}
+@keyframes moveImg {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+#pokeName {
+    font-size: 2.5em;
+    font-weight: 900;
+    color: white;
+    text-shadow: 1px 1px black;
+    position: absolute;
+    right: 10%;
+    transform: translateY(50%) translateX(500px);
+
+    /* Animation slide from right */
+    animation: moveName 1.5s ease forwards;
+}
+@keyframes moveName {
+    from {
+        transform: translateY(50%) translateX(500px);
+    }
+    to {
+        transform: translateY(50%) translateX(0px);
+    }
+}
+
+
+#pokeDetailContent {
+
+
+}

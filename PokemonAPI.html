@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon API</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         #content {
             display: grid;
@@ -14,10 +18,11 @@
             grid-row-gap: 15px;
         }
         .pokeCard {
+            position: relative;
             display: inline-flex;
             flex-direction: column;
             width: fit-content;
-            border: 1px solid rgba(0,0,0,0.2);
+            border: 1px solid rgba(0,0,0,0.4);
             padding: 20px;
             border-radius: 4px;
         }
@@ -32,13 +37,45 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }
 
+        .types {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 70%;
+
+        }
+        .primaryType {
+            padding: 0px 3px;
+            border: 1px solid white;
+            color: white;
+            border-radius: 4px;
+        }
+        .secondaryType {
+            margin-left: 5px;
+
+            padding: 0px 3px;
+            /* border: 1px solid white; */
+            color: white;
+            border-radius: 4px;
+        }
+
+        .pokeName {
+            font-weight: 500;
+            color: white;
+            text-shadow: 1px 1px black;
+        }
+
+
 
     </style>
 </head>
 <body>
     
     <label>Nombre de Pokémons:</label>
-    <input type="number" id="inputNbrPoke" >
+    <input type="number" id="inputNbrPoke">
+
+    <label>Recherche nom:</label>
+    <input type="text" id="inputNamePoke">
 
     <div id="content">
 

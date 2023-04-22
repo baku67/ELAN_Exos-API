@@ -1,5 +1,14 @@
 window.onload = function() {
 
+    
+
+    function capitalize(word) {
+        return word.charAt(0).toUpperCase() + word.slice(1);
+    }
+
+
+
+
     const inputNbr = document.querySelector("#inputNbrPoke");
 
     inputNbr.addEventListener("input", (event) => {
@@ -96,6 +105,7 @@ window.onload = function() {
                             break;
                     }
                     bgColor =  "background-color:"+ color;
+                    typesHtml = "<span class='types primaryType'>" + capitalize(data.types[0].type.name) + "</span>";
 
 
                 }
@@ -219,6 +229,7 @@ window.onload = function() {
                             break;
                     }
                     bgColor =  "background: linear-gradient(132deg, "+ color1 +" 0%, "+ color2 +" 100%);" ;
+                    typesHtml = "<span class='twoTypesCont types'><span class='primaryType'>" + capitalize(data.types[0].type.name) + "</span><span class='secondaryType'>" + capitalize(data.types[1].type.name) + "</span></span>";
                 }
 
                 // console.log(typeClass);
@@ -226,10 +237,11 @@ window.onload = function() {
 
 
                 contentDiv.innerHTML += 
-                "<div style='"+bgColor+"' class='pokeCard'>" +
+                "<a href='pokeDetail.php?id=" + data.id + "'><div style='"+bgColor+"' class='pokeCard'>" +
                     "<img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + data.id + ".png' >" + 
-                    "<span>" + capitalizedName + "</span>" +
-                "</div>"
+                    "<span class='pokeName'>" + capitalizedName + "</span>" +
+                    typesHtml +
+                "</div></a>"
 
             })
             .catch((error) => contentDiv.innerHTML = error)
@@ -239,8 +251,35 @@ window.onload = function() {
     }
 
 
-    function capitalize(word) {
-        return word.charAt(0).toUpperCase() + word.slice(1);
+
+
+    const inputName = document.querySelector("#inputNamePoke");
+
+    inputName.addEventListener("input", (event) => {
+
+        if(inputNbr.value == null) {
+            document.querySelector("#content").innerHTML = "";
+        }
+
+        event.preventDefault();
+        const inputNameValue = document.querySelector("#inputNamePoke").value;
+        getInfosAPI2(inputNameValue); // nom inputé
+    })
+
+
+    function getInfosAPI2(namePoke) {
+
+        const contentDiv = document.querySelector("#content");
+        contentDiv.innerHTML = "";
+
+        for (let i = 1; i < nbrPoke; i++) {
+            
+            fetch("https://pokeapi.co/api/v2/pokemon/"+ namePoke)
+            .then((response) => response.json())
+            .then((data) => {
+                console.log(data)
+            });
+        }
     }
 
 
