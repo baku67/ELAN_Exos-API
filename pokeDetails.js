@@ -278,7 +278,7 @@ window.onload = function() {
 
         var moves = data.moves;
         moves.forEach(element => {
-            document.querySelector('#movesDiv').innerHTML += "<li>" + element.move.name + "</li>"
+            document.querySelector('#movesDiv').innerHTML += "<li><a href='moveDetail.php?moveName=" + element.move.name + "'>" + element.move.name + "</a></li>"
         })
 
     })

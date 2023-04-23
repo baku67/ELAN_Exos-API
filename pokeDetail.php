@@ -38,24 +38,26 @@
             margin: 7px 0;
         } 
         #backButton {
-            font-size: 1.5em;
+            font-size: 1.2em;
             /* float: right; */
             border: 1px solid;
             padding: 4px 8px;
             border-radius: 5px;
-            background-color: aquamarine;
+            background-color: #e7fff7;
+            transition: all 0.3s;
         }
         #movesDiv {
             height: 300px;
             overflow-y: scroll;
         }
         .navButton {
-            font-size: 1.5em;
+            font-size: 1.2em;
             /* float: center; */
             border: 1px solid;
             padding: 4px 8px;
             border-radius: 5px;
-            background-color: aquamarine;
+            background-color: #e7fff7;
+            transition: all 0.3s;
         }
         #navButtonsDiv {
             display: inline-flex;
