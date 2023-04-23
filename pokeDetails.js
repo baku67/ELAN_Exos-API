@@ -217,6 +217,53 @@ window.onload = function() {
         }
 
 
+        
+        nextPokeLink = document.getElementById('nextPokeUrl');
+        nextPokeLink.href = "pokeDetail.php?id=" + (data.id + 1);
+        previousPokeLink = document.getElementById('previousPokeUrl');
+        if ((data.id - 1) <= 0) {
+            var newId = 1; 
+        }
+        else {
+            var newId = (data.id - 1);
+        }
+        previousPokeLink.href = "pokeDetail.php?id=" + newId;
+
+
+        var types = data.types;
+        types.forEach(element => {
+            document.querySelector('#typesDiv').innerHTML += "<li>" + element.type.name + "</li>";
+        });
+
+        var abilities = data.abilities;
+        abilities.forEach(element => {
+            document.querySelector('#abilitiesDiv').innerHTML += "<li>" + element.ability.name + "</li>";
+        });
+
+        var stats = data.stats;
+        stats.forEach(element => {
+            document.querySelector('#statsDiv').innerHTML += "<li>" + element.stat.name + ": " + element.base_stat + "</li>";
+        });
+
+        document.querySelector('#infosDiv').innerHTML += "<li>Taille: " + data.height + " pieds</li>";
+        document.querySelector('#infosDiv').innerHTML += "<li>Poids: " + data.weight + " kg</li>";
+
+        var itemsHeld = data.held_items;
+        if (itemsHeld.length == 0) {
+            document.querySelector('#itemsHeldDiv').innerHTML += "<li>Aucun objet tenu</li>";
+        }
+        else {
+            // itemsHeld.forEach(element => {
+            //     document.querySelector('#itemsHeldDiv').innerHTML += "<li>" + element.
+            // })
+            document.querySelector('#itemsHeldDiv').innerHTML += "<li>Là y'en a</li>";
+        }
+
+        var moves = data.moves;
+        moves.forEach(element => {
+            document.querySelector('#movesDiv').innerHTML += "<li>" + element.move.name + "</li>"
+        })
+
     })
 
 
