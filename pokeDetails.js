@@ -231,11 +231,23 @@ window.onload = function() {
 
 
         var types = data.types;
+        if (types.length > 1) {
+            document.getElementById('typesTitle').innerHTML = "Types";
+        }
+        else {
+            document.getElementById('typesTitle').innerHTML = "Type";
+        }
         types.forEach(element => {
             document.querySelector('#typesDiv').innerHTML += "<li>" + element.type.name + "</li>";
         });
 
         var abilities = data.abilities;
+        if (abilities.length > 1) {
+            document.getElementById('abilitiesTitle').innerHTML = "Compétences innées";
+        }
+        else {
+            document.getElementById('abilitiesTitle').innerHTML = "Compétence innée";
+        }
         abilities.forEach(element => {
             document.querySelector('#abilitiesDiv').innerHTML += "<li>" + element.ability.name + "</li>";
         });
@@ -253,10 +265,15 @@ window.onload = function() {
             document.querySelector('#itemsHeldDiv').innerHTML += "<li>Aucun objet tenu</li>";
         }
         else {
-            // itemsHeld.forEach(element => {
-            //     document.querySelector('#itemsHeldDiv').innerHTML += "<li>" + element.
-            // })
-            document.querySelector('#itemsHeldDiv').innerHTML += "<li>Là y'en a</li>";
+            if (itemsHeld > 1) {
+                document.getElementById('itemsHeldTitle').innerHTML = "Objets tenus";
+            }
+            else {
+                document.getElementById('itemsHeldTitle').innerHTML = "Objet tenu";
+            }
+            itemsHeld.forEach(element => {
+                document.querySelector('#itemsHeldDiv').innerHTML += "<li>" + element.item.name + "</li>";
+            })
         }
 
         var moves = data.moves;

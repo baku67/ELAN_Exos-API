@@ -39,7 +39,7 @@
         } 
         #backButton {
             font-size: 1.5em;
-            float: right;
+            /* float: right; */
             border: 1px solid;
             padding: 4px 8px;
             border-radius: 5px;
@@ -48,6 +48,20 @@
         #movesDiv {
             height: 300px;
             overflow-y: scroll;
+        }
+        .navButton {
+            font-size: 1.5em;
+            /* float: center; */
+            border: 1px solid;
+            padding: 4px 8px;
+            border-radius: 5px;
+            background-color: aquamarine;
+        }
+        #navButtonsDiv {
+            display: inline-flex;
+            margin-top: 15px;
+            width: 100%;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -65,11 +79,15 @@
 
             <div id='pokeDetailContent'>
 
-                <a href='PokemonAPI.html' id='backButton'>Retour</a>
-                <a href='' id='previousPokeUrl'>Précédent</a>
-                <a href='' id='nextPokeUrl'>Suivant</a>
+                <div id='navButtonsDiv'>
+                    <div>
+                        <a href='' class='navButton' id='previousPokeUrl'>Précédent</a>
+                        <a href='' class='navButton' id='nextPokeUrl'>Suivant</a>
+                    </div>
+                    <a href='PokemonAPI.html' id='backButton'>Retour</a>
+                </div>
 
-                <h3>Type(s)</h3>
+                <h3 id='typesTitle'>Type(s)</h3>
                 <ul id='typesDiv'></ul>
 
                 <br>
@@ -79,7 +97,7 @@
 
                 <br>
 
-                <h3>Compétences</h3>
+                <h3 id='abilitiesTitle'>Compétences innées</h3>
                 <ul id='abilitiesDiv'></ul>
 
                 <br>
@@ -89,7 +107,7 @@
 
                 <br>
 
-                <h3>Objets tenus</h3>
+                <h3 id='itemsHeldTitle'>Objets tenus</h3>
                 <ul id='itemsHeldDiv'></ul>
 
                 <br>
