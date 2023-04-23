@@ -63,6 +63,20 @@
             width: 100%;
             justify-content: space-between;
         }
+        #pokeName {
+            text-decoration: underline;
+            text-decoration-color: rgba(255,255,255,0);
+            text-underline-offset: 50px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #pokeName {
+                font-size: 2em;
+            }
+            #pokeImg {
+                width: 30%;
+            }
+        }
     </style>
 </head>
 <body>
