@@ -245,7 +245,7 @@ window.onload = function() {
 
                 contentDiv.innerHTML += 
                 "<a href='pokeDetail.php?id=" + data.id + "'><div style='"+bgColor+"' class='pokeCard'>" +
-                    "<img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + data.id + ".png' >" + 
+                    "<img class='pokeImg' src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + data.id + ".png' >" + 
                     "<span class='pokeName'>" + capitalizedName + "</span>" +
                     typesHtml +
                 "</div></a>"

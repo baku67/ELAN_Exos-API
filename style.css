@@ -9,12 +9,22 @@ body {
     background-color: rgb(255 202 0 / 10%);
 }
 a {
-    text-decoration: none;
-    color: black;
+    text-decoration: none !important;
+    color: inherit !important;
 }
 
 h1 {
     color: #ffcb03;
+    font-size: 2em !important;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #fff;
+    margin: 0 !important; 
+    padding: 10px 12px;
+    width: fit-content;
+}
+
+header {
+    border-bottom: 3px solid #ffcb03;
+
 }
 
 #hiddenId {
@@ -24,6 +34,14 @@ h1 {
 #mainDetail {
     width: 100%;
 }
+
+
+.pokeImg {
+    background: -webkit-radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(43,107,210,0) 70%);
+    background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(43,107,210,0) 70%);
+}
+
+
 
 
 
