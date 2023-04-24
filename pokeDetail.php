@@ -16,22 +16,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <script src='pokeDetails.js'></script>
-    <style>
-        #pokeDetailContent {
-            width: 75%;
-            margin: 0 auto;
-            opacity: 0;
+    <script src="https://kit.fontawesome.com/698848973e.js" crossorigin="anonymous"></script>
 
-            animation: fadeIn 0.8s 1s ease forwards;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+    <style>
+
         ul {
             list-style-type: none;
         }
@@ -39,12 +27,11 @@
             margin: 7px 0;
         } 
         #backButton {
-            font-size: 1.2em;
-            /* float: right; */
-            border: 1px solid;
+            font-size: 1em;
+            /* border: 1px solid; */
             padding: 4px 8px;
             border-radius: 5px;
-            background-color: #e7fff7;
+            /* background-color: #e7fff7; */
             transition: all 0.3s;
         }
         #movesDiv {
@@ -52,17 +39,19 @@
             overflow-y: scroll;
         }
         .navButton {
-            font-size: 1.2em;
-            /* float: center; */
-            border: 1px solid;
+            font-size: 1em;
+            /* border: 1px solid; */
             padding: 4px 8px;
             border-radius: 5px;
-            background-color: #e7fff7;
+            /* background-color: #e7fff7; */
             transition: all 0.3s;
         }
         #navButtonsDiv {
             display: inline-flex;
-            margin-top: 15px;
+            padding: 5px 0;
+            background-color: #003a70;
+            color: white;
+            /* margin-top: 15px; */
             width: 100%;
             justify-content: space-between;
         }
@@ -97,15 +86,19 @@
             <h2 id='pokeName'></h2>
         </div>
 
+        <div id='navButtonsDiv'>
+            <a href='' class='navButton' id='previousPokeUrl'><i class="fa-solid fa-angles-left"></i></a>
+            <a href='index.html' id='backButton'><i class="fa-solid fa-house"></i></a>
+            <a href='' class='navButton' id='nextPokeUrl'><i class="fa-solid fa-angles-right"></i></a>
+        </div>
+
         <div id='pokeDetailContent'>
 
-            <div id='navButtonsDiv'>
-                <div>
-                    <a href='' class='navButton' id='previousPokeUrl'>Précédent</a>
-                    <a href='' class='navButton' id='nextPokeUrl'>Suivant</a>
-                </div>
+            <!-- <div id='navButtonsDiv'>
+                <a href='' class='navButton' id='previousPokeUrl'>Précédent</a>
                 <a href='index.html' id='backButton'>Retour</a>
-            </div>
+                <a href='' class='navButton' id='nextPokeUrl'>Suivant</a>
+            </div> -->
 
             <h3 id='typesTitle'>Type(s)</h3>
             <ul id='typesDiv'></ul>

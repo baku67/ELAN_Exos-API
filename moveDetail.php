@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
     <script src='moveDetail.js'></script>
+    <script src="https://kit.fontawesome.com/698848973e.js" crossorigin="anonymous"></script>
+
     <style>
         .data {
             font-size: 1.0em;

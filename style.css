@@ -52,11 +52,14 @@ header {
 
 
 #pokeDetailHeader {
+    /* // Fixed height pour éviter effet moche lors rafraichissement */
+    height: 116px;
     width: 100%;
     display: inline-flex;
     justify-content: space-between;
     position: relative;
 
+    border-bottom: 3px solid #ffcb03;
 }
 
 
@@ -147,6 +150,17 @@ header {
 
 
 #pokeDetailContent {
+    width: 85%;
+    margin: 0 auto;
+    opacity: 0;
 
-
+    animation: fadeIn 0.8s 1s ease forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
