@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/698848973e.js" crossorigin="anonymous"></script>
+    
     <style>
         #content {
             display: grid;
@@ -83,10 +85,17 @@
     <main style="width: 90%; margin: 0 auto;">
 
         <label>Nombre de Pokémons:</label>
-        <input type="number" id="inputNbrPoke" value="10" class="form-control">
+        <div style="display:inline-flex; width: 100%;">
+            <input type="range" id="inputNbrPoke" value="20" min="5" max="100" step="1" class="form-control">
+            <span id="rangeNbr" style="margin-left: 10px;"></span>
+        </div>
+        <br>
+
 
         <label>Recherche nom:</label>
-        <input type="text" id="inputNamePoke" class="form-control">
+        <input type="text" id="inputNamePoke" class="form-control" placeholder="WIP">
+
+        <p id="regenerateBtn"><i class="fa-solid fa-rotate"></i>&nbsp;Regénérer</p>
 
         <div id="content"></div>
         </div>

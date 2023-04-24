@@ -79,10 +79,33 @@ header {
     }
 }
 
+
+#regenerateBtn {
+    background-color: #003a70;
+    color: white;
+    width: fit-content;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 15px auto;
+}
+
+.fa-rotate {
+    color: #ffcb03;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
 .pokeName {
     font-weight: 500;
     color: white;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000 !important;
+    
+    display: inline-block;
+    width: 100px;
+    /* height: 50px; */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 16px;
 }
 .pokeId {
     font-size: 0.7em;

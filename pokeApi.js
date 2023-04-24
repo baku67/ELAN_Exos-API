@@ -1,6 +1,9 @@
 window.onload = function() {
 
-    
+    // Initialisation du nombre value de l'input range nbrPokemon
+    document.getElementById('rangeNbr').innerHTML = document.getElementById('inputNbrPoke').value;
+
+
 
     function capitalize(word) {
         return word.charAt(0).toUpperCase() + word.slice(1);
@@ -18,7 +21,15 @@ window.onload = function() {
     getInfosAPI(inputNbrValue); // nbr inputé
 
 
+    // Proc regen button index
+    document.querySelector("#regenerateBtn").addEventListener("click", function() {
+        getInfosAPI(20); // nbr inputé
+    })
+
+
     inputNbr.addEventListener("input", (event) => {
+
+        document.getElementById('rangeNbr').innerHTML = document.querySelector("#inputNbrPoke").value;
 
         if(inputNbr.value == null) {
             document.querySelector("#content").innerHTML = "";
