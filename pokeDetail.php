@@ -104,7 +104,7 @@
                     <a href='' class='navButton' id='previousPokeUrl'>Précédent</a>
                     <a href='' class='navButton' id='nextPokeUrl'>Suivant</a>
                 </div>
-                <a href='PokemonAPI.html' id='backButton'>Retour</a>
+                <a href='index.html' id='backButton'>Retour</a>
             </div>
 
             <h3 id='typesTitle'>Type(s)</h3>

@@ -11,6 +11,13 @@ window.onload = function() {
 
     const inputNbr = document.querySelector("#inputNbrPoke");
 
+    if(inputNbr.value == null) {
+        document.querySelector("#content").innerHTML = "";
+    }
+    const inputNbrValue = document.querySelector("#inputNbrPoke").value;
+    getInfosAPI(inputNbrValue); // nbr inputé
+
+
     inputNbr.addEventListener("input", (event) => {
 
         if(inputNbr.value == null) {

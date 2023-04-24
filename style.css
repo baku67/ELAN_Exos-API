@@ -2,12 +2,19 @@
     font-family: 'Comfortaa', cursive;
     font-weight: 500;
 }
+
 body {
     margin: 0;
+    /* background-color: rgb(0 58 112 / 3%); */
+    background-color: rgb(255 202 0 / 10%);
 }
 a {
     text-decoration: none;
     color: black;
+}
+
+h1 {
+    color: #ffcb03;
 }
 
 #hiddenId {
