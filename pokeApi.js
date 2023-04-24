@@ -34,9 +34,22 @@ window.onload = function() {
 
 
         contentDiv.innerHTML = "";
+        var arrayIds = [];
+
         for (let i = 1; i < nbrPoke; i++) {
+
+            // API id du Pokémon aléatoire dans la fourchette dispo (Les poke dont l'idAPI > 1000 semblent 404)
+            // L'id random est regénéré tant qu'il est deja présent dans l'array des id sortis:
+            var randomNbr = Math.floor(Math.random() * 999) + 1;  
+            while (arrayIds.includes(randomNbr)) {
+                randomNbr = Math.floor(Math.random() * 999) + 1; 
+            }
+            arrayIds.push(randomNbr);
+
+            console.log(randomNbr);
+            console.log(arrayIds);
             
-            fetch("https://pokeapi.co/api/v2/pokemon/"+ i)
+            fetch("https://pokeapi.co/api/v2/pokemon/"+ randomNbr)
             .then((response) => response.json())
             .then((data) => {
                 console.log(data)
@@ -245,7 +258,8 @@ window.onload = function() {
 
                 contentDiv.innerHTML += 
                 "<a href='pokeDetail.php?id=" + data.id + "'><div style='"+bgColor+"' class='pokeCard'>" +
-                    "<img class='pokeImg' src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + data.id + ".png' >" + 
+                    "<img class='pokeImg' src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + data.id + ".png' >" +
+                    "<span class='pokeId'>#404</span>" + 
                     "<span class='pokeName'>" + capitalizedName + "</span>" +
                     typesHtml +
                 "</div></a>"
