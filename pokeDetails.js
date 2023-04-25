@@ -25,6 +25,9 @@ window.onload = function() {
         var color = "";
         var color1 = "";
         var color2 = "";
+        var backgroundColor = "";
+        var backgroundColor1 = "";
+        var backgroundColor2 = "";
 
 
         // Background-color Header
@@ -34,63 +37,82 @@ window.onload = function() {
 
                 case "fire":
                     color = "#ff7600";
+                    backgroundColor = "#FFE2CA";
                     break;
                 case "water":
                     color = "#0072ff";
+                    backgroundColor = "#C6DFFF";
                     break;
                 case "poison":
                     color = "#224e06";
+                    backgroundColor = "#BBD8A7";
                     break;
                 case "grass":
                     color = "#00ff66";
+                    backgroundColor = "#BBFFD7";
                     break;
                 case "normal":
                     color = "#808080";
+                    backgroundColor = "#E1E1E1";
                     break;
                 case "electric":
                     color = "#EABB00";
+                    backgroundColor = "#FFF891";
                     break;
                 case "ice":
                     color = "#BDFFF8";
+                    backgroundColor = "#BBFFF7";
                     break;
                 case "fighting":
                     color = "#FF8C2E";
+                    backgroundColor = "#FFDCBF";
                     break;
                 case "ground":
                     color = "#863D18";
+                    backgroundColor = "#E7C9BA";
                     break;
                 case "flying":
                     color = "#56CFED";
+                    backgroundColor = "#B9F2FF";
                     break;
                 case "psychic":
                     color = "#AA2DDC";
+                    backgroundColor = "#E7BFF8";
                     break;
                 case "bug":
                     color = "#9FE320";
+                    backgroundColor = "#DDF4B3";
                     break;
                 case "rock":
                     color = "#6F6057";
+                    backgroundColor = "#E1D9D3";
                     break;
                 case "ghost":
                     color = "#E7DBED";
+                    backgroundColor = "#FFFFFF";
                     break;
                 case "dragon":
                     color = "darkBlue";
+                    backgroundColor = "#C9C9F9";
                     break;
                 case "steel":
                     color = "gray";
+                    backgroundColor = "#ECECEC";
                     break;
                 case "dark":
                     color = "black";
+                    backgroundColor = "#B1B1B1";
                     break;
                 case "fairy":
                     color = "pink";
+                    backgroundColor = "#FFC7EE";
                     break;
             }
             bgColor = color;
             // typesHtml = "<span class='types primaryType'>" + capitalize(data.types[0].type.name) + "</span>";
 
             document.getElementById("pokeDetailHeader").style.backgroundColor = color;
+            document.body.style.backgroundColor = backgroundColor;
         }
 
         else if (data.types.length == 2) {
@@ -99,57 +121,76 @@ window.onload = function() {
 
                 case "fire":
                     color1 = "#ff7600";
+                    backgroundColor = "#FFE2CA";
+
                     break;
                 case "water":
                     color1 = "#0072ff";
+                    backgroundColor = "#C6DFFF";
                     break;
                 case "poison":
                     color1 = "#224e06";
+                    backgroundColor = "#BBD8A7";
                     break;
                 case "grass":
                     color1 = "#00ff66";
+                    backgroundColor = "#BBFFD7";
                     break;
                 case "normal":
                     color1 = "#808080";
+                    backgroundColor = "#E1E1E1";
                     break;
                 case "electric":
                     color1 = "#EABB00";
+                    backgroundColor = "#FFF891";
                     break;
                 case "ice":
                     color1 = "#BDFFF8";
+                    backgroundColor = "#BBFFF7";
                     break;
                 case "fighting":
                     color1 = "#FF8C2E";
+                    backgroundColor = "#FFDCBF";
                     break;
                 case "ground":
                     color1 = "#863D18";
+                    backgroundColor = "#E7C9BA";
                     break;
                 case "flying":
                     color1 = "#56CFED";
+                    backgroundColor = "#B9F2FF";
                     break;
                 case "psychic":
                     color1 = "#AA2DDC";
+                    backgroundColor = "#E7BFF8";
                     break;
                 case "bug":
                     color1 = "#9FE320";
+                    backgroundColor = "#DDF4B3";
                     break;
                 case "rock":
                     color1 = "#6F6057";
+                    backgroundColor = "#E1D9D3";
                     break;
                 case "ghost":
                     color1 = "#E7DBED";
+                    backgroundColor = "#FFFFFF";
                     break;
                 case "dragon":
                     color1 = "darkBlue";
+                    backgroundColor = "#C9C9F9";
                     break;
                 case "steel":
                     color1 = "gray";
+                    backgroundColor = "#ECECEC";
                     break;
                 case "dark":
                     color1 = "black";
+                    backgroundColor = "#B1B1B1";
                     break;
                 case "fairy":
                     color1 = "pink";
+                    backgroundColor = "#FFC7EE";
                     break;
             }
 
@@ -214,6 +255,8 @@ window.onload = function() {
             // typesHtml = "<span class='twoTypesCont types'><span class='primaryType'>" + capitalize(data.types[0].type.name) + "</span><span class='secondaryType'>" + capitalize(data.types[1].type.name) + "</span></span>";
 
             document.getElementById("pokeDetailHeader").style = "background: linear-gradient(132deg, "+ color1 +" 0%, "+ color2 +" 100%);";
+            document.body.style.backgroundColor = backgroundColor;
+
         }
 
 
